@@ -1,0 +1,116 @@
+.register {
+  height: 100vh;
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    width: 60%;
+    min-height: 600px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    display: flex;
+    overflow: hidden;
+    .left {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font-size: 50px;
+        line-height: 50px;
+        color: #555;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 13px;
+        button {
+          border: none;
+          background-color: #f5f5f5;
+          color: rgb(255, 128, 82);
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+      div {
+        display: flex;
+        button {
+          display: flex;
+          justify-content: space-around;
+          width: 50%;
+          margin: 5px;
+          padding: 15px 5px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          background-color: #527bca;
+          color: #fff;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+      hr {
+        border: 0;
+        height: 1.5rem;
+        opacity: 0.6;
+        &:after {
+          content: attr(data-content);
+          color: black;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        div {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          border-bottom: 1px solid lightgray;
+          border-radius: 5px;
+          padding: 5px;
+          input {
+            width: 100%;
+            border: none;
+            padding: 20px 15px;
+          }
+        }
+        .checkbox {
+          background-color: #f5f5f5;
+          border-bottom: none;
+          input {
+            width: auto;
+          }
+          label {
+            margin: auto;
+            font-size: 13px;
+          }
+        }
+        button {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: #fff;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      padding: 20px;
+      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://images.unsplash.com/photo-1517586979036-b7d1e86b3345?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")
+          center;
+      background-size: contain;
+      p {
+        text-justify: auto;
+        color: white;
+        font-size: 100px;
+      }
+    }
+  }
+}

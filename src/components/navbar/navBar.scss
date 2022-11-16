@@ -1,0 +1,52 @@
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    span {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      padding: 5px;
+      input {
+        border: none;
+        width: 300px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+      }
+    }
+  }
+}

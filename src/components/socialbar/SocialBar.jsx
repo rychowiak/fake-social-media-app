@@ -1,18 +1,20 @@
 import "./socialBar.scss";
-import { Button, IconButton, Badge } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 
 function SocialBar() {
   return (
-    <div className="socialBar">
+    <div className="rightBar">
       <div className="container">
-        <div className="item"></div>
-        <span>LOREM IPSUM</span>
-        <div className="container-info">
+        <div className="item">
+          <span>Suggestions For You</span>
           <div className="user">
-            <div className="user-info">
-              <img src="../../assets/user.png" alt="" />
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <span>Jane Doe</span>
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
               <Button variant="contained" size="small">
@@ -24,9 +26,9 @@ function SocialBar() {
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
+            <div className="userInfo">
               <img src="../../assets/user.png" alt="" />
-              <span>Name name</span>
+              <span>Jane Doe</span>
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
               <Button variant="contained" size="small">
@@ -38,129 +40,167 @@ function SocialBar() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <span>Lates activities</span>
-        <div className="container-info">
+        <div className="item">
+          <span>Latest Activities</span>
           <div className="user">
-            <div className="user-info">
-              <img src="../../assets/user.png" alt="" />
-              <span>Name lastname</span>
-              <span>liked a post</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <span>
+                Jane Doe <span>changed their cover picture</span>
+              </span>
             </div>
-            <div>
-              <span>just now</span>
-            </div>
+            <span>1 min ago</span>
           </div>
           <div className="user">
-            <div className="user-info">
-              <img src="../../assets/user.png" alt="" />
-              <span>Name name</span>
-              <span>just posted</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <span>
+                Jane Doe <span>changed their cover picture</span>
+              </span>
             </div>
-            <div>
-              <span>1 min ago</span>
+            <span>1 min ago</span>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <span>
+                Jane Doe <span>changed their cover picture</span>
+              </span>
             </div>
+            <span>1 min ago</span>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <span>
+                Jane Doe <span>changed their cover picture</span>
+              </span>
+            </div>
+            <span>1 min ago</span>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <span>Online Friends</span>
-        <div className="container-info">
+        <div className="item">
+          <span>Online Friends</span>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="" />
-              </Badge>
-              <span>Name lastname</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane smith</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="warning">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
           <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="user-info">
-              <Badge variant="dot" color="success">
-                <img src="../../assets/user.png" alt="alt-img" />
-              </Badge>
-              <span>Name name</span>
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+              <div className="online" />
+              <span>Jane Doe</span>
             </div>
           </div>
         </div>

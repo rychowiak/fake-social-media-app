@@ -1,8 +1,12 @@
 import "./socialBar.scss";
-import { Button, IconButton } from "@mui/material";
+import { Button, IconButton, useTheme } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import { tokens } from "../../theme";
 
 function SocialBar() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <div className="rightBar">
       <div className="container">
@@ -17,7 +21,16 @@ function SocialBar() {
               <span>Jane Doe</span>
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
-              <Button variant="contained" size="small">
+              <Button
+                variant="contained"
+                size="small"
+                sx={{
+                  backgroundColor: colors.green[600],
+                  "&:hover": {
+                    backgroundColor: colors.green[500],
+                  },
+                }}
+              >
                 follow
               </Button>
               <IconButton color="error" size="small">
@@ -31,7 +44,16 @@ function SocialBar() {
               <span>Jane Doe</span>
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
-              <Button variant="contained" size="small">
+              <Button
+                variant="contained"
+                size="small"
+                sx={{
+                  backgroundColor: colors.green[600],
+                  "&:hover": {
+                    backgroundColor: colors.green[500],
+                  },
+                }}
+              >
                 follow
               </Button>
               <IconButton color="error" size="small">
@@ -42,18 +64,6 @@ function SocialBar() {
         </div>
         <div className="item">
           <span>Latest Activities</span>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <span>
-                Jane Doe <span>changed their cover picture</span>
-              </span>
-            </div>
-            <span>1 min ago</span>
-          </div>
           <div className="user">
             <div className="userInfo">
               <img

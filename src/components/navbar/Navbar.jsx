@@ -1,43 +1,60 @@
 import "./navBar.scss";
 import { Link } from "react-router-dom";
+import { Box, IconButton, useTheme, InputBase } from "@mui/material";
+import { colorModeContext, tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { IconButton } from "@mui/material";
+import { useContext } from "react";
 
 function NavBar() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(colorModeContext);
+
   return (
-    <div className="topBar">
+    <Box className="topBar" backgroundColor={colors.primary[400]}>
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>SocialAPP</span>
         </Link>
-        <IconButton color="primary">
+        <IconButton>
           <HomeOutlinedIcon />
         </IconButton>
-        <IconButton color="primary">
+        <IconButton>
           <GridViewOutlinedIcon />
         </IconButton>
-        <IconButton color="primary">
-          <DarkModeOutlinedIcon />
+        <IconButton onClick={colorMode.toggleColorMode}>
+          {theme.palette.mode === "dark" ? (
+            <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon />
+          )}
         </IconButton>
-        <div className="search">
-          <SearchOutlinedIcon />
-          <input type="search" placeholder="Search..." />
-        </div>
+        <Box
+          display="flex"
+          backgroundColor={colors.grey[800]}
+          borderRadius="3px"
+        >
+          <IconButton>
+            <SearchOutlinedIcon />
+          </IconButton>
+          <InputBase sx={{ ml: 2 }} placeholder="Search..." />
+        </Box>
       </div>
       <div className="right">
-        <IconButton color="primary">
+        <IconButton>
           <PeopleOutlinedIcon />
         </IconButton>
-        <IconButton color="primary">
+        <IconButton>
           <NotificationsOutlinedIcon />
         </IconButton>
-        <IconButton color="primary">
+        <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
         <div className="user">
@@ -45,7 +62,7 @@ function NavBar() {
           <span>John Doe</span>
         </div>
       </div>
-    </div>
+    </Box>
   );
 }
 

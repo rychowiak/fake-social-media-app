@@ -1,3 +1,5 @@
+import { colorModeContext, useMode } from "./theme";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import Login from "./scenes/login/Login";
 import {
   RouterProvider,
@@ -15,6 +17,8 @@ import Home from "./scenes/home/Home";
 import Profile from "./scenes/profile/Profile";
 
 function App() {
+  const [theme, colorMode] = useMode();
+
   const currentUser = true;
 
   const ProtectedRoute = ({ children }) => {
@@ -73,9 +77,14 @@ function App() {
     },
   ]);
   return (
-    <div className="app">
-      <RouterProvider router={router} />
-    </div>
+    <colorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className="app">
+          <RouterProvider router={router} />
+        </div>
+      </ThemeProvider>
+    </colorModeContext.Provider>
   );
 }
 export default App;

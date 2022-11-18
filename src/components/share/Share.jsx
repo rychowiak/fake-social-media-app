@@ -10,7 +10,7 @@ function Share() {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box className="share">
+    <Box className="share" sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}>
       <div className="container">
         <div className="top">
           <img

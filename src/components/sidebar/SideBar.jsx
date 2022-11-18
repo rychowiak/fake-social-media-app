@@ -1,3 +1,4 @@
+import { Box, useTheme } from "@mui/material";
 import Friends from "../../assets/1.png";
 import Groups from "../../assets/2.png";
 import Market from "../../assets/3.png";
@@ -12,11 +13,18 @@ import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
 import "./sideBar.scss";
+import { tokens } from "../../theme";
 
 function SideBar() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <div className="sideBar">
-      <div className="container">
+      <Box
+        className="container"
+        sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}
+      >
         <div className="menu">
           <div className="user">
             <img src="../../assets/user.png" alt="user img" />
@@ -79,7 +87,7 @@ function SideBar() {
             <span>Fund</span>
           </div>
         </div>
-      </div>
+      </Box>
     </div>
   );
 }

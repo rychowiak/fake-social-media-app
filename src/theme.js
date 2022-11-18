@@ -37,6 +37,9 @@ export const tokens = (mode) => {
         800: "#1e5245",
         900: "#0f2922",
       },
+      action: {
+        100: "rgba(255, 255, 255, 0.1)",
+      },
     };
   } else {
     return {
@@ -73,6 +76,9 @@ export const tokens = (mode) => {
         800: "#b7ebde",
         900: "#dbf5ee",
       },
+      action: {
+        100: "rgba(0, 0, 0, 0.2)",
+      },
     };
   }
 };
@@ -92,7 +98,7 @@ export const themeSettings = (mode) => {
               main: colors.green[500],
             },
             background: {
-              default: colors.primary[500],
+              default: colors.primary[400],
             },
           }
         : {
@@ -103,7 +109,7 @@ export const themeSettings = (mode) => {
               main: colors.green[500],
             },
             background: {
-              default: "#fcfcfc",
+              default: "#f6f3f3",
             },
           }),
     },

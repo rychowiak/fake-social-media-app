@@ -1,22 +1,25 @@
 import { useState } from "react";
 import "./post.scss";
-import { IconButton } from "@mui/material";
+import { IconButton, Box, useTheme } from "@mui/material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from "react-router-dom";
-
 import Comments from "../comments/Comments";
+import { tokens } from "../../theme";
 
 function Post({ post }) {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   const [commentOpen, setCommentOpen] = useState(false);
 
   const liked = false;
 
   return (
-    <div className="post">
+    <Box className="post" sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}>
       <div className="container">
         <div className="user">
           <div className="userInfo">
@@ -55,7 +58,7 @@ function Post({ post }) {
         </div>
         {commentOpen && <Comments />}
       </div>
-    </div>
+    </Box>
   );
 }
 

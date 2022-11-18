@@ -18,7 +18,11 @@ function NavBar() {
   const colorMode = useContext(colorModeContext);
 
   return (
-    <Box className="topBar" backgroundColor={colors.primary[400]}>
+    <Box
+      className="topBar"
+      backgroundColor={colors.primary[400]}
+      sx={{ boxShadow: `0 0 15px ${colors.action[100]}` }}
+    >
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>SocialAPP</span>

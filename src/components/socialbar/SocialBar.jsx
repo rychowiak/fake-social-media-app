@@ -1,5 +1,5 @@
 import "./socialBar.scss";
-import { Button, IconButton, useTheme } from "@mui/material";
+import { Box, Button, IconButton, useTheme } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import { tokens } from "../../theme";
 
@@ -10,7 +10,10 @@ function SocialBar() {
   return (
     <div className="rightBar">
       <div className="container">
-        <div className="item">
+        <Box
+          className="item"
+          sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}
+        >
           <span>Suggestions For You</span>
           <div className="user">
             <div className="userInfo">
@@ -61,8 +64,11 @@ function SocialBar() {
               </IconButton>
             </div>
           </div>
-        </div>
-        <div className="item">
+        </Box>
+        <Box
+          className="item"
+          sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}
+        >
           <span>Latest Activities</span>
           <div className="user">
             <div className="userInfo">
@@ -100,8 +106,11 @@ function SocialBar() {
             </div>
             <span>1 min ago</span>
           </div>
-        </div>
-        <div className="item">
+        </Box>
+        <Box
+          className="item"
+          sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}
+        >
           <span>Online Friends</span>
           <div className="user">
             <div className="userInfo">
@@ -213,7 +222,7 @@ function SocialBar() {
               <span>Jane Doe</span>
             </div>
           </div>
-        </div>
+        </Box>
       </div>
     </div>
   );

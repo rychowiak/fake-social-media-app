@@ -24,11 +24,16 @@ function NavBar() {
       sx={{ boxShadow: `0 0 15px ${colors.action[100]}` }}
     >
       <div className="left">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link
+          to="/"
+          style={{ textDecoration: "none", color: colors.primary[100] }}
+        >
           <span>SocialAPP</span>
         </Link>
         <IconButton>
-          <HomeOutlinedIcon />
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <HomeOutlinedIcon />
+          </Link>
         </IconButton>
         <IconButton>
           <GridViewOutlinedIcon />

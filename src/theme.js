@@ -87,6 +87,12 @@ export const themeSettings = (mode) => {
   const colors = tokens(mode);
 
   return {
+    breakpoints: {
+      values: {
+        mobile: 480,
+        tablet: 960,
+      },
+    },
     palette: {
       mode,
       ...(mode === "dark"

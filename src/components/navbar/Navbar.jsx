@@ -1,6 +1,7 @@
 import "./navBar.scss";
 import { Link } from "react-router-dom";
 import { Box, IconButton, useTheme, InputBase } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { colorModeContext, tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
@@ -12,13 +13,34 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useContext } from "react";
 
+const Responsive = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("mobile")]: {
+    input: {
+      display: "none",
+    },
+    ".right": {
+      display: "none",
+    },
+  },
+  [theme.breakpoints.down("tablet")]: {
+    input: {
+      width: "200px",
+    },
+    ".right": {
+      ".user": {
+        display: "none",
+      },
+    },
+  },
+}));
+
 function NavBar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(colorModeContext);
 
   return (
-    <Box
+    <Responsive
       className="topBar"
       backgroundColor={colors.primary[400]}
       sx={{ boxShadow: `0 0 15px ${colors.action[100]}` }}
@@ -53,7 +75,7 @@ function NavBar() {
           <IconButton>
             <SearchOutlinedIcon />
           </IconButton>
-          <InputBase sx={{ ml: 2 }} placeholder="Search..." />
+          <InputBase sx={{ ml: 1 }} placeholder="Search..." />
         </Box>
       </div>
       <div className="right">
@@ -71,7 +93,7 @@ function NavBar() {
           <span>John Doe</span>
         </div>
       </div>
-    </Box>
+    </Responsive>
   );
 }
 

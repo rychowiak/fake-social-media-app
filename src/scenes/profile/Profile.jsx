@@ -11,18 +11,39 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { tokens } from "../../theme";
 import Posts from "../../components/posts/Posts";
+import { styled } from "@mui/material/styles";
+
+const Responsive = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("mobile")]: {
+    ".container": {
+      flexDirection: "column",
+      height: "30vh",
+    },
+  },
+  [theme.breakpoints.down("tablet")]: {
+    ".user-img": {
+      left: "110px",
+    },
+    ".container": {
+      ".social-apps": {
+        flexWrap: "wrap",
+      },
+    },
+  },
+}));
 
 function Profile() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="profile">
+    <Responsive className="profile">
       <img
         className="coverImg"
         src="https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
         alt=""
       />
+      <img className="user-img" src="../../assets/user.png" alt="" />
       <Box
         className="container"
         sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}
@@ -35,7 +56,6 @@ function Profile() {
           <TwitterIcon fontSize="large" />
         </div>
         <div className="profile-info">
-          <img className="user-img" src="../../assets/user.png" alt="" />
           <span style={{ fontSize: "24px", fontWeight: "500" }}>John Doe</span>
           <div className="user-icons">
             <div className="item">
@@ -63,7 +83,7 @@ function Profile() {
         </div>
       </Box>
       <Posts />
-    </div>
+    </Responsive>
   );
 }
 

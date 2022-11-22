@@ -4,6 +4,17 @@
     height: 150px;
     object-fit: cover;
   }
+  .user-img {
+    object-fit: cover;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 170px;
+  }
   .container {
     display: flex;
     justify-content: space-between;
@@ -19,16 +30,7 @@
     .profile-info {
       flex: 3;
       text-align: center;
-      .user-img {
-        position: absolute;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        left: 0;
-        right: 25px;
-        margin: auto;
-        top: 170px;
-      }
+
       .user-icons {
         display: flex;
         justify-content: space-around;

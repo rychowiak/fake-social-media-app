@@ -1,4 +1,5 @@
 import { Box, useTheme } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Friends from "../../assets/1.png";
 import Groups from "../../assets/2.png";
 import Market from "../../assets/3.png";
@@ -15,12 +16,18 @@ import Fund from "../../assets/13.png";
 import "./sideBar.scss";
 import { tokens } from "../../theme";
 
+const Responsive = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("mobile")]: {
+    display: "none",
+  },
+}));
+
 function SideBar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="sideBar">
+    <Responsive className="sideBar">
       <Box
         className="container"
         sx={{ boxShadow: `0 0 25px ${colors.action[100]}` }}
@@ -88,7 +95,7 @@ function SideBar() {
           </div>
         </div>
       </Box>
-    </div>
+    </Responsive>
   );
 }
 

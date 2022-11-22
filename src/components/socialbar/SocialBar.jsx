@@ -1,14 +1,24 @@
 import "./socialBar.scss";
 import { Box, Button, IconButton, useTheme } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import { styled } from "@mui/material/styles";
 import { tokens } from "../../theme";
+
+const Responsive = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("mobile")]: {
+    display: "none",
+  },
+  [theme.breakpoints.down("tablet")]: {
+    display: "none",
+  },
+}));
 
 function SocialBar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="rightBar">
+    <Responsive className="rightBar">
       <div className="container">
         <Box
           className="item"
@@ -224,7 +234,7 @@ function SocialBar() {
           </div>
         </Box>
       </div>
-    </div>
+    </Responsive>
   );
 }
 

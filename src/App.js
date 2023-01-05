@@ -64,6 +64,10 @@ function App() {
           element: <Home />,
         },
         {
+          path: "https://rychowiak.github.io/fake-social-media-app",
+          element: <Home />,
+        },
+        {
           path: "/profile/:id",
           element: <Profile />,
         },

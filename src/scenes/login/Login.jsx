@@ -21,7 +21,7 @@ function Login() {
     e.preventDefault();
     try {
       await login(input);
-      navigate("/");
+      navigate("/fake-social-media-app");
     } catch (error) {
       setError(error.response.data);
     }

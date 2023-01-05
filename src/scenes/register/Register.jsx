@@ -22,7 +22,10 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8800/api/auth/register", input);
+      await axios.post(
+        "https://socialmediaapp-production-1954.up.railway.app/api/auth/register",
+        input
+      );
     } catch (err) {
       setError(err.response.data);
     }

@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/fake-social-media-app/static/css/main.b4fa326d.css",
-    "main.js": "/fake-social-media-app/static/js/main.dbaa0afc.js",
+    "main.js": "/fake-social-media-app/static/js/main.63dde8da.js",
     "index.html": "/fake-social-media-app/index.html",
     "main.b4fa326d.css.map": "/fake-social-media-app/static/css/main.b4fa326d.css.map",
-    "main.dbaa0afc.js.map": "/fake-social-media-app/static/js/main.dbaa0afc.js.map"
+    "main.63dde8da.js.map": "/fake-social-media-app/static/js/main.63dde8da.js.map"
   },
   "entrypoints": [
     "static/css/main.b4fa326d.css",
-    "static/js/main.dbaa0afc.js"
+    "static/js/main.63dde8da.js"
   ]
 }

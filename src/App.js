@@ -52,7 +52,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/fake-social-media-app/",
+      path: "/",
       element: (
         <ProtectedRoute>
           <Layout />
@@ -60,7 +60,7 @@ function App() {
       ),
       children: [
         {
-          path: "/fake-social-media-app/",
+          path: "/",
           element: <Home />,
         },
         {
@@ -70,7 +70,7 @@ function App() {
       ],
     },
     {
-      path: "/fake-social-media-app/",
+      path: "/",
       errorElement: <ErrorPage />,
     },
     {

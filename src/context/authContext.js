@@ -10,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (input) => {
     const res = await axios.post(
-      "http://localhost:8800/api/auth/login",
+      "https://rychowiak.github.io/fake-social-media-app/api/auth/login",
       input,
       {
         withCredentials: true,

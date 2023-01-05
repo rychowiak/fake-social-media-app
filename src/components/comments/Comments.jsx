@@ -40,6 +40,7 @@ function Comments({ postId }) {
     setDesc("");
   };
 
+  if (error) return;
   return (
     <div className="comments">
       <div className="write">

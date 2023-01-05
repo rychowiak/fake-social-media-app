@@ -64,7 +64,7 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/fake-social-media-app/profile/:id",
+          path: "/profile/:id",
           element: <Profile />,
         },
       ],
